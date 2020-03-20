@@ -54,9 +54,9 @@ class Owner
   
   def walk_dogs
     
-    @pets.collect do |species, instances|
+    @pets.map do |species, instances|
       if species == :dogs
-        instances.map do |dog|
+        instances.each do |dog|
           dog.mood = "happy"
         end
       end
@@ -64,9 +64,9 @@ class Owner
   end 
   
   def feed_cats 
-   @pets.collect do |species, instances|
+   @pets.map do |species, instances|
       if species == :cats
-        instances.map do |cat|
+        instances.each do |cat|
           dog.mood = "happy"
         end
       end
