@@ -61,13 +61,9 @@ class Owner
   end 
   
   def feed_cats 
-   @pets.map do |species, instances|
-      if species == :cats
-        instances.each do |cat|
-          dog.mood = "happy"
-        end
-      end
-    end
+    self.cats.each do |cat|
+      cat.mood="happy"
+    end 
     
     
   end 
